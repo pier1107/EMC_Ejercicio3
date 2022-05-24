@@ -1,0 +1,7 @@
+package EMC;
+public class Main {
+    public static void main(String args[]) {
+    Cliente.agregarCliente(new Cliente());
+    System.out.println(Cliente.listarClientes());
+    }
+}
