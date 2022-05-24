@@ -1,0 +1,58 @@
+package Matriz;
+
+import javax.swing.*;
+
+public class Matriz {
+
+    private int matriz[][];
+
+    private int fil;
+
+    private int col;
+
+    private int n;
+
+    public Matriz()
+    {
+        fil = Integer.parseInt(JOptionPane.showInputDialog("Ingresar Fila"));
+
+        col = Integer.parseInt(JOptionPane.showInputDialog("Ingrese Columna"));
+
+        this.matriz = new int[fila][columna];
+    }
+
+    public void agregarMatriz()
+    {
+        for (int fil=0; fil < this.matriz.length; fil++)
+        {
+            for (int col=0; col < this.matriz[fil].length; col++)
+            {
+                this.n = Integer.parseInt(JOptionPane.showInputDialog("Ingrese Valores"));
+
+                this.matriz[fil][col] = this.n;
+            }
+        }
+    }
+
+    public void mostrarMatriz()
+    {
+        for(int fil=0; fil < this.matriz.length; fil++)
+        {
+            for(int col=0; col < this.matriz[fil].length; col++)
+            {
+                System.out.printf("%d ", this.matriz[fil][col]);
+            }
+
+            System.out.println();
+        }
+    }
+
+    public static void main(String args[])
+    {
+        Matriz matriz = new Matriz();
+
+        matriz.agregarMatriz();
+
+        matriz.mostrarMatriz();
+    }
+}
