@@ -1,0 +1,36 @@
+package EMC;
+
+import javax.swing.JOptionPane;
+
+public class ClienteControlador {   
+    public Cliente[] cliente;
+    public int contador=0;
+    public int dato;
+
+public void agregarCliente(Cliente cliente){
+    this.cliente[this.contador] = cliente;
+    this.contador++;
+}
+public Cliente[] listarClientes(){
+    return this.cliente;
+}
+
+ public Cliente[] mostrarCliente(){
+     return this.cliente;
+ }
+ public Cliente[] buscarClientes(int[] Cliente){
+     int posicion = -1;
+     int dato = Integer.parseInt(JOptionPane.showInputDialog("Buscar el siguiente dato"));
+     for(int inicio=0; inicio<5;inicio++){
+         if(dato==Cliente[inicio]){
+            posicion= inicio;
+         }
+     }
+     if(posicion>=0){
+         System.out.println("El cliente"+dato+"se encuentra en la posicion"+posicion);
+     }else{
+             System.out.println("Dato no encontrado");
+         }
+    return cliente;
+ }
+}
