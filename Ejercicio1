@@ -1,0 +1,49 @@
+
+package EMC;
+
+import javax.swing.JOptionPane;
+
+public class Cliente {
+
+    private String nombres;
+    private String apepat;
+    private String apemat;
+    private int dni;
+    public Cliente(String nombres, String apepat, String apemat, String string, String string2){
+        this.nombres = nombres;
+        this.apemat = apemat;
+        this.apepat = apepat;
+        this.dni = dni;
+    }
+    public Cliente() {
+    }
+    public void setNombres(String nombres) {
+        nombres = nombres;
+    }
+    public String getNombres(){
+        return nombres;
+    }
+    public void setApemat(String apemat) {
+        apemat = apemat;
+    }
+    public String getApemat(){
+        return apemat;
+    }
+    public void setApepat(String apepat) {
+        apepat = apepat;
+    }
+    public String getApepat(){
+        return apepat;
+    }
+    public void setdni(int dni) {
+       dni = dni ;
+    }
+    public int getdni(){
+        return dni;
+    }
+    public static void agregarCliente(Cliente cliente) {
+    }
+    public static char[] listarClientes() {
+        return null;
+    }
+}
