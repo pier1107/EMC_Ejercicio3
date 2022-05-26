@@ -1,4 +1,4 @@
-package Clase12;
+package EMC;
 
 public class Main 
 {
@@ -12,11 +12,11 @@ public class Main
            
     
             curso.setDocente(new Docente("Mario", "Castañeda"));
-            System.out.println("nombre del docente: "+curso.getDocente().getNombres());
-            System.out.println("apellido del docente; "+curso.getDocente().getApellido());
+            System.out.println("nombre del docente: "+curso.getDocente().getNomb());
+            System.out.println("apellido del docente; "+curso.getDocente().getAp());
 
             curso.setEstudiante(new Estudiante("Paquito", 756984268));
-            System.out.println("nombre del alumno: "+curso.getEstudiante().getNombres());
+            System.out.println("nombre del alumno: "+curso.getEstudiante().getNomb());
             System.out.println("codigo del alumno: "+curso.getEstudiante().getCodigo());
            
         }
