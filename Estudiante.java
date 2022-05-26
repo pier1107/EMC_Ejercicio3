@@ -1,36 +1,36 @@
-package Clase12;
+package EMC;
 
 public class Estudiante 
 {
-    private String nombres;
+    private String nomb;
 
-    private int codigoAlum;
+    private int codigo;
 
 
 
-    Estudiante(String nombres, int cod)
+    Estudiante(String nomb, int cod)
 {
-    setNombre(nombres);
+    setNombre(nomb);
     setCodigo(cod);
     
 }
-    void setNombre(String nombres)
+    void setNombre(String nomb)
     {
-        this.nombres= nombres;
+        this.nomb= nomb;
     }
 
     String getNombres()
     {
-      return nombres;
+      return nomb;
     }
 
     void setCodigo(int cod)
     {
-        codigoAlum=cod;
+        codigo=cod;
     }
     int getCodigo()
     {
-        return codigoAlum;
+        return codigo;
     }
     
 }
