@@ -1,4 +1,4 @@
-package Clase12;
+package EMC;
 
 public class Curso 
 {
