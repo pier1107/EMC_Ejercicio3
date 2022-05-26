@@ -26,11 +26,11 @@ public class Docente {
 
     void setApellido(String ap)
     {
-        apellido = ap;
+        ap = ap;
     }
     String getApellido()
     {
-        return apellido;
+        return ap;
     }
    
     
