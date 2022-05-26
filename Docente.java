@@ -1,32 +1,32 @@
-package Clase12;
+package EMC;
 
 public class Docente {
 
-    private String nombre;
+    private String nom;
 
-    private String apellido;
+    private String ap;
 
-    Docente(String nombre, String apell)
+    Docente(String nom, String ap)
 {
-    setNombre(nombre);
-    setApellido(apell);
+    setNombre(nom);
+    setApellido(ap);
   
     
     
 }
-    void setNombre(String nombre)
+    void setNombre(String nom)
     {
-        this.nombre= nombre;
+        this.nom= nom;
     }
 
     String getNombres()
     {
-      return nombre;
+      return nom;
     }
 
-    void setApellido(String apell)
+    void setApellido(String ap)
     {
-        apellido = apell;
+        apellido = ap;
     }
     String getApellido()
     {
