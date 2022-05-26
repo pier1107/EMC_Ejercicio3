@@ -1,58 +1,57 @@
-package Matriz;
+package Ejercicio5;
+public class Raices {
+    private double a;
+    private double b;
+    private double c;
 
-import javax.swing.*;
-
-public class Matriz {
-
-    private int matriz[][];
-
-    private int fil;
-
-    private int col;
-
-    private int n;
-
-    public Matriz()
-    {
-        fil = Integer.parseInt(JOptionPane.showInputDialog("Ingresar Fila"));
-
-        col = Integer.parseInt(JOptionPane.showInputDialog("Ingrese Columna"));
-
-        this.matriz = new int[fila][columna];
+    public Raices(double a, double b, double c){
+        this.a=a;
+        this.b=b;
+        this.c=c;
     }
 
-    public void agregarMatriz()
-    {
-        for (int fil=0; fil < this.matriz.length; fil++)
-        {
-            for (int col=0; col < this.matriz[fil].length; col++)
-            {
-                this.n = Integer.parseInt(JOptionPane.showInputDialog("Ingrese Valores"));
+    private void obtenerRaices(){
+         
+        double x1=(-b+Math.sqrt(getDiscriminante()))/(2*a);
+        double x2=(-b-Math.sqrt(getDiscriminante()))/(2*a);
+         
+        System.out.println("Solucion X1");
+        System.out.println(x1);
+        System.out.println("Solucion X2");
+        System.out.println(x2);
+    }
 
-                this.matriz[fil][col] = this.n;
-            }
+    private void obtenerRaiz(){
+         
+        double x=(-b)/(2*a);
+         
+        System.out.println("Unica solucion");
+        System.out.println(x);
+         
+    }
+
+    private double getDiscriminante(){
+        return Math.pow(b, 2)-(4*a*c);
+    }
+
+    private boolean tieneRaices(){
+        return getDiscriminante()>0;
+    }
+     
+    private boolean tieneRaiz(){
+        return getDiscriminante()==0;
+    }
+
+    public void calcular(){
+         
+        if(tieneRaices()){
+            obtenerRaices();
+        }else if(tieneRaiz()){
+            obtenerRaiz();
+        }else{
+            System.out.println("No tiene soluciones");
         }
+         
     }
-
-    public void mostrarMatriz()
-    {
-        for(int fil=0; fil < this.matriz.length; fil++)
-        {
-            for(int col=0; col < this.matriz[fil].length; col++)
-            {
-                System.out.printf("%d ", this.matriz[fil][col]);
-            }
-
-            System.out.println();
-        }
-    }
-
-    public static void main(String args[])
-    {
-        Matriz matriz = new Matriz();
-
-        matriz.agregarMatriz();
-
-        matriz.mostrarMatriz();
-    }
+     
 }
